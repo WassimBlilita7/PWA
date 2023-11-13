@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Book List</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Book List</h1>
+  <ul id="bookList"></ul>
+
+  <script>
+    var books = [
+      {
+        title: "You Don't Know JS",
+        author: "Kyle Simpson",
+        alreadyRead: false
+      },
+      {
+        title: "Eloquent JavaScript",
+        author: "Marijn Haverbeke",
+        alreadyRead: true
+      }
+    ];
+
+    var bookList = document.getElementById("bookList");
+
+    books.forEach(function(book) {
+      var li = document.createElement("li");
+      li.textContent = book.title + " by " + book.author;
+
+      if (book.alreadyRead) {
+        li.style.textDecoration = "line-through";
+      }
+
+      bookList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
