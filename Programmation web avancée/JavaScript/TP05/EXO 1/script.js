@@ -1,5 +1,5 @@
 function showWelcome(){
-    var nameInput = document.getElementById("name");
+    var nameInput = document.querySelector("input");
     var welcomeMessage = document.querySelector("#welcome-message");
 
     var name = nameInput.value;
